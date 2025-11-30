@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-c7d52604e65c163c2a072dfd83fdb236"}, "mark": {"type": "circle", "size": 80}, "encoding": {"color": {"condition": {"param": "param_1", "field": "Region", "legend": null, "type": "nominal"}, "value": "lightgray"}, "opacity": {"condition": {"param": "param_1", "value": 1}, "value": 0.1}, "size": {"field": "Poverty Rate", "title": "Average Poverty Rate (%)", "type": "quantitative"}, "tooltip": [{"field": "State", "type": "nominal"}, {"field": "Obesity Rate", "type": "quantitative"}, {"field": "Poverty Rate", "type": "quantitative"}, {"field": "Median Income", "type": "quantitative"}], "x": {"field": "Median Income", "title": "Average Median Income ($)", "type": "quantitative"}, "y": {"field": "Obesity Rate", "title": "Average Obesity Rate (%)", "type": "quantitative"}}, "height": 400, "params": [{"name": "param_1", "select": {"type": "point", "fields": ["Region"]}, "bind": {"input": "radio", "options": [null, "Midwest", "Northeast", "South", "West"], "labels": ["All", "Midwest", "Northeast", "South", "West"], "name": "US Region: "}, "value": null}], "title": "Average State Obesity vs Median Income (2020\u20132023)", "width": 500, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-c7d52604e65c163c2a072dfd83fdb236": [{"State": "Alabama", "Region": "South", "Obesity Rate": 39.1, "Poverty Rate": 15.774999999999999, "Median Income": 57474.75}, {"State": "Alaska", "Region": "West", "Obesity Rate": 33.175, "Poverty Rate": 10.425, "Median Income": 83791.5}, {"State": "Arizona", "Region": "West", "Obesity Rate": 31.825000000000003, "Poverty Rate": 12.7, "Median Income": 71283.0}, {"State": "Arkansas", "Region": "South", "Obesity Rate": 38.125, "Poverty Rate": 15.725, "Median Income": 54494.0}, {"State": "California", "Region": "West", "Obesity Rate": 28.425, "Poverty Rate": 12.0, "Median Income": 88705.5}, {"State": "Colorado", "Region": "West", "Obesity Rate": 24.8, "Poverty Rate": 9.4, "Median Income": 85450.5}, {"State": "Connecticut", "Region": "Northeast", "Obesity Rate": 29.9, "Poverty Rate": 9.95, "Median Income": 85752.5}, {"State": "Delaware", "Region": "South", "Obesity Rate": 36.0, "Poverty Rate": 10.8, "Median Income": 76629.75}, {"State": "Florida", "Region": "South", "Obesity Rate": 30.03333333333333, "Poverty Rate": 12.675, "Median Income": 66837.0}, {"State": "Georgia", "Region": "South", "Obesity Rate": 35.05, "Poverty Rate": 13.7, "Median Income": 69142.5}, {"State": "Hawaii", "Region": "West", "Obesity Rate": 25.375, "Poverty Rate": 10.0, "Median Income": 90706.0}, {"State": "Idaho", "Region": "West", "Obesity Rate": 31.725, "Poverty Rate": 10.375, "Median Income": 69103.5}, {"State": "Illinois", "Region": "Midwest", "Obesity Rate": 34.0, "Poverty Rate": 11.65, "Median Income": 75137.0}, {"State": "Indiana", "Region": "Midwest", "Obesity Rate": 37.15, "Poverty Rate": 12.1, "Median Income": 64935.75}, {"State": "Iowa", "Region": "Midwest", "Obesity Rate": 37.025, "Poverty Rate": 10.825, "Median Income": 67344.25}, {"State": "Kansas", "Region": "Midwest", "Obesity Rate": 35.725, "Poverty Rate": 11.325, "Median Income": 66621.25}, {"State": "Kentucky", "Region": "South", "Obesity Rate": 38.199999999999996, "Poverty Rate": 15.9, "Median Income": 57487.75}, {"State": "Louisiana", "Region": "South", "Obesity Rate": 39.175, "Poverty Rate": 18.7, "Median Income": 54387.75}, {"State": "Maine", "Region": "Northeast", "Obesity Rate": 32.15, "Poverty Rate": 10.8, "Median Income": 66729.0}, {"State": "Maryland", "Region": "South", "Obesity Rate": 33.15, "Poverty Rate": 9.7, "Median Income": 93060.75}, {"State": "Massachusetts", "Region": "Northeast", "Obesity Rate": 26.599999999999998, "Poverty Rate": 10.175, "Median Income": 92788.25}, {"State": "Michigan", "Region": "Midwest", "Obesity Rate": 34.875, "Poverty Rate": 13.1, "Median Income": 65204.75}, {"State": "Minnesota", "Region": "Midwest", "Obesity Rate": 32.5, "Poverty Rate": 9.1, "Median Income": 80153.5}, {"State": "Mississippi", "Region": "South", "Obesity Rate": 39.6, "Poverty Rate": 18.85, "Median Income": 50853.25}, {"State": "Missouri", "Region": "Midwest", "Obesity Rate": 35.75, "Poverty Rate": 12.5, "Median Income": 63473.5}, {"State": "Montana", "Region": "West", "Obesity Rate": 30.325, "Poverty Rate": 12.0, "Median Income": 64985.25}, {"State": "Nebraska", "Region": "Midwest", "Obesity Rate": 35.45, "Poverty Rate": 10.25, "Median Income": 69059.75}, {"State": "Nevada", "Region": "West", "Obesity Rate": 31.075, "Poverty Rate": 12.825, "Median Income": 69870.5}, {"State": "New Hampshire", "Region": "Northeast", "Obesity Rate": 30.875, "Poverty Rate": 7.275, "Median Income": 89366.0}, {"State": "New Jersey", "Region": "Northeast", "Obesity Rate": 28.475, "Poverty Rate": 9.75, "Median Income": 93094.75}, {"State": "New Mexico", "Region": "West", "Obesity Rate": 33.3, "Poverty Rate": 17.175, "Median Income": 57179.25}, {"State": "New York", "Region": "Northeast", "Obesity Rate": 28.375, "Poverty Rate": 13.75, "Median Income": 77274.75}, {"State": "North Carolina", "Region": "South", "Obesity Rate": 34.425, "Poverty Rate": 13.0, "Median Income": 64991.75}, {"State": "North Dakota", "Region": "Midwest", "Obesity Rate": 34.825, "Poverty Rate": 10.575, "Median Income": 70619.5}, {"State": "Ohio", "Region": "Midwest", "Obesity Rate": 36.95, "Poverty Rate": 13.125, "Median Income": 64076.25}, {"State": "Oklahoma", "Region": "South", "Obesity Rate": 38.625, "Poverty Rate": 15.275, "Median Income": 58023.25}, {"State": "Oregon", "Region": "West", "Obesity Rate": 30.75, "Poverty Rate": 11.825, "Median Income": 73743.0}, {"State": "Pennsylvania", "Region": "Northeast", "Obesity Rate": 32.73333333333333, "Poverty Rate": 11.65, "Median Income": 69861.0}, {"State": "Rhode Island", "Region": "Northeast", "Obesity Rate": 30.650000000000002, "Poverty Rate": 11.325, "Median Income": 77908.5}, {"State": "South Carolina", "Region": "South", "Obesity Rate": 35.825, "Poverty Rate": 14.05, "Median Income": 62219.5}, {"State": "South Dakota", "Region": "Midwest", "Obesity Rate": 36.1, "Poverty Rate": 11.825, "Median Income": 67845.75}, {"State": "Tennessee", "Region": "South", "Obesity Rate": 36.775, "Poverty Rate": 13.6, "Median Income": 62385.5}, {"State": "Texas", "Region": "South", "Obesity Rate": 35.45, "Poverty Rate": 13.825, "Median Income": 70266.0}, {"State": "Utah", "Region": "West", "Obesity Rate": 30.2, "Poverty Rate": 8.325, "Median Income": 84698.75}, {"State": "Vermont", "Region": "Northeast", "Obesity Rate": 27.725, "Poverty Rate": 9.925, "Median Income": 73828.25}, {"State": "Virginia", "Region": "South", "Obesity Rate": 33.975, "Poverty Rate": 10.075, "Median Income": 83945.5}, {"State": "Washington", "Region": "West", "Obesity Rate": 29.775, "Poverty Rate": 9.925, "Median Income": 87570.5}, {"State": "West Virginia", "Region": "South", "Obesity Rate": 40.475, "Poverty Rate": 16.6, "Median Income": 52574.0}, {"State": "Wisconsin", "Region": "Midwest", "Obesity Rate": 34.95, "Poverty Rate": 10.55, "Median Income": 69443.0}, {"State": "Wyoming", "Region": "West", "Obesity Rate": 32.575, "Poverty Rate": 10.35, "Median Income": 69656.25}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
