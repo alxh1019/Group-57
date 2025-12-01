@@ -70,16 +70,49 @@
     <h2>SNAP Benefits Map (June 2025)</h2>
 
 <p id='main'>
-   This map shows SNAP benefits per participating household and per participating person for each state in June 2025. 
-   You can toggle between per household and per person using the buttons below the map.
+   This interactive choropleth map of the United States visualizes SNAP (Supplemental Nutrition Assistance Program) benefits as of June 2025. 
+    The map allows users to explore both average benefits per participating household and average benefits per participating person, 
+    using data sourced from SNAP program records for each state, excluding U.S. territories. 
+    Users can toggle between the two metrics using buttons located below the map, 
+    while hovering over each state displays detailed information including total SNAP benefits, the number of participating households and persons, 
+    and the corresponding SNAP benefits per household or per person. 
+    The map uses a color gradient—blue for per participating household and green for per participating person—with darker shades representing higher benefits.
 </p>
 
 <iframe 
     src="snap_map.html" 
-    width="1100" 
+    width="95%" 
     height="750" 
     style="border:none;">
 </iframe>
+
+ <p id='main'>
+       From this plot, we can see people from Hawaii an Alaska get the most support. This could be due to higher cost of living.
+    </p>
+
+<h2>SNAP Benefits per Participating Person by State – June 2025</h2>
+
+<p id='main'>
+   This static horizontal bar chart displays the SNAP benefits per participating person for each state. 
+   States are sorted from lowest to highest, with the length of each bar representing the amount of SNAP benefits per person. 
+</p>
+
+<img src="snap_per_person_horizontal_static.png" 
+     alt="SNAP per Participating Person by State" 
+     width="95%" 
+     style="display:block; margin:auto; border:1px solid #ccc;">
+     
+<p id='main'>
+   From this chart, we can see how SNAP benefits per person vary widely across the United States. 
+   Hawaii and Alaska are dramatic outliers, receiving nearly double the national average. 
+    This is largely attributable to their exceptionally high costs of living—groceries in Hawaii can cost 50-90% more than the continental U.S. 
+    due to shipping costs and geographic isolation. New York's high ranking likely reflects the elevated food costs in urban areas like New York City. 
+    The lowest-receiving states are predominantly in the Midwest, where the cost of living—particularly food costs—tends to be lower. 
+    Minnesota receives nearly $195 less per person than Hawaii, a 55% difference. 
+    Interestingly, West Virginia appears here despite having high poverty rates, suggesting that SNAP calculations weight cost of living heavily over poverty levels alone.
+
+</p>
+
 
 
 
