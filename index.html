@@ -5,144 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DS4200 Webpage</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* General page styling */
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        h1 {
-            color: blue;
-            font-size: 24px;
-            text-align: center;
-        }
-
-        h2 {
-            margin-top: 30px;
-            color: #333;
-        }
-
-        p {
-            margin-bottom: 20px;
-        }
-
-        /* Responsive images */
-        .responsive-img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 20px auto;
-            border: 1px solid #ccc;
-        }
-
-        /* Responsive iframes */
-        .responsive-iframe {
-            position: relative;
-            width: 100%;
-            padding-bottom: 66.66%; /* Aspect ratio (height/width) */
-            height: 0;
-            overflow: hidden;
-            margin: 20px 0;
-        }
-
-        .responsive-iframe iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        /* Optional: center text for plots */
-        .center-text {
-            text-align: center;
-        }
-    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Group 57 Group Presentation</h1>
+    
+    <h1 style="color: blue;font-size: 24px;">Group 57 Group Presentation</h1>
 
-        <section>
-            <h2>Overall Introduction</h2>
-            <p>
-                Over the past several decades, obesity has existed as an overwhelming public health challenge in the United States, varying across states. 
-                Simultaneously, economic disparities across these states have influenced citizens' access to healthy foods, diet, and overall quality of life. 
-                Metrics such as GDP per capita and state food assistance programs (like SNAP) encapsulate these disparities and may coincide with variations in obesity rates. 
-                This project investigates the possible connection between obesity rates, income, and food assistance across the U.S., with the goal of understanding why some states have higher obesity rates.
-            </p>
-        </section>
+    <h2>Overall Introduction</h2>
 
-        <section>
-            <h2>United States Statistics (2020-2023)</h2>
-            <p>
-                The following visualizations show statistics of obesity rate, poverty rate, and income among all U.S. states from 2020–2023.
-            </p>
+    <p id='main'>
+       Over the past several decades, obesity has existed as an overwhelming public health challenge in the United States, varying across states. 
+        Simultaneously, economic disparities across these states have influenced these citizens' access to healthy foods, diet, and overall quality of their lifestyle. 
+        For instance, metrics such as GDP per capita and state food assistance programs, such as the Supplemental Nutrition Assistance Program (SNAP),  
+        across states encapsulate these existing disparities and could coincide with the variation in obesity rates across the country. 
+        This project investigates the possible connection of obesity rates to income and food assistance across the United States. 
+        We find this topic interesting as it could uncover the reason as to why some states have higher obesity rates compared to others. 
+        Additionally, our results could suggest whether food assistance addresses nutrient deficits or inadvertently contributes to the obesity rate of that specific state.
+    </p>
 
-            <h3>Tooltip Scatterplot of Yearly Statistics among States</h3>
-            <p>
-                This scatterplot shows obesity rate (%) vs average income ($) for each state. Hover over points to see detailed statistics. Points are colored by U.S. region.
-            </p>
+    <h1 font-size: 24px;">United States Statistics (2020-2023)</h1>
 
-            <div class="responsive-iframe">
-                <iframe src="static.html"></iframe>
-            </div>
+    <p id='main'>
+       The following visualizations are about the statistics of obesity rate, poverty rate, and income among all states of America from the years 2020–2023.
+    </p>
+  
+    <h2>Tootltip Scatterplot of Yearly Statistics among States</h2>
+    
+    <p id='main'>
+       This plot displays yearly statistics for each state from years 2020-2023 on a Obesity Rate (%) vs Average Income ($) scatterplot.
+        Here, you can hover your cursor above each plotted point and get a more in-depth analysis of each state and their corresponding statistics. 
+        All points are also marked with colors for the US region they reside in.
+    </p>
+    
+    <iframe 
+        src="static.html" 
+        width="700" 
+        height="500" 
+        style="border:none;">
+    </iframe>
 
-            <p>
-                Higher obesity rates generally correspond with lower average income across states.
-            </p>
+    <p id='main'>
+       From this plot, we can see how generally, the higher the obesity rate of a state, the lower their average income is.
+    </p>
+  
+    <h2>Regional Scatterplot Visualization</h2>
 
-            <h3>Regional Scatterplot Visualization</h3>
-            <p>
-                Similar to the previous plot, this graph allows users to highlight U.S. regions. Colors and opacity differentiate regions for better understanding.
-            </p>
+    <p id='main'>
+       This plot is a similar graph to the Tooltip Scatterplot but has an additional interaction where the user can highlight each region of the United States.
+        From here, we are able to differentiate each region on the map by color and opacity to help the user better understand the difference between the regions.
+    </p>
+    
+    <iframe 
+        src="interactive.html" 
+        width="700" 
+        height="600" 
+        style="border:none;">
+    </iframe>
 
-            <div class="responsive-iframe">
-                <iframe src="interactive.html"></iframe>
-            </div>
+    <p id='main'>
+       From this plot, we can see how the south generally occupy the points towards the top left of the graph, or the high obesity and low income region. 
+        Additionally, the northeast region generally occupy the points towards the bottom right of the graph, or the low obesity and high income region.
+        The other regions display mixed results.
+    </p>
 
-            <p>
-                The South tends to have high obesity and low income (top-left), while the Northeast tends to have low obesity and high income (bottom-right). Other regions show mixed results.
-            </p>
-        </section>
+    <h2>SNAP Benefits Map (June 2025)</h2>
 
-        <section>
-            <h2>SNAP Benefits Map (June 2025)</h2>
-            <p>
-                This interactive choropleth map visualizes SNAP benefits per household and per person in June 2025. Hovering over states shows detailed data. Blue = per household, green = per person.
-            </p>
+<p id='main'>
+   This interactive choropleth map of the United States visualizes SNAP (Supplemental Nutrition Assistance Program) benefits as of June 2025. 
+    The map allows users to explore both average benefits per participating household and average benefits per participating person, 
+    using data sourced from SNAP program records for each state, excluding U.S. territories. 
+    Users can toggle between the two metrics using buttons located below the map, 
+    while hovering over each state displays detailed information including total SNAP benefits, the number of participating households and persons, 
+    and the corresponding SNAP benefits per household or per person. 
+    The map uses a color gradient—blue for per participating household and green for per participating person—with darker shades representing higher benefits.
+</p>
 
-            <div class="responsive-iframe">
-                <iframe src="snap_map.html"></iframe>
-            </div>
+<iframe 
+    src="snap_map.html" 
+    width="1100" 
+    height="750" 
+    style="border:none;">
+</iframe>
 
-            <p>
-                People in Hawaii and Alaska receive the most support, likely due to higher costs of living.
-            </p>
+ <p id='main'>
+       From this plot, we can see people from Hawaii an Alaska get the most support. This could be due to higher cost of living.
+    </p>
 
-            <h3>SNAP Benefits per Participating Person by State – June 2025</h3>
-            <p>
-                This horizontal bar chart shows SNAP benefits per person by state, from lowest to highest.
-            </p>
+<h2>SNAP Benefits per Participating Person by State – June 2025</h2>
 
-            <img src="snap_per_person_horizontal_static.png" 
-                 alt="SNAP per Participating Person by State" 
-                 class="responsive-img">
+<p id='main'>
+   This static horizontal bar chart displays the SNAP benefits per participating person for each state. 
+   States are sorted from lowest to highest, with the length of each bar representing the amount of SNAP benefits per person. 
+</p>
 
-            <p>
-                Hawaii and Alaska are outliers, receiving nearly double the national average due to high food costs. New York also ranks high, while Midwest states receive lower benefits. West Virginia appears higher than expected, indicating cost-of-living adjustments.
-            </p>
-        </section>
-    </div>
+<img src="snap_per_person_horizontal_static.png" 
+     alt="SNAP per Participating Person by State" 
+     width="75%" 
+     style="display:block; margin:auto; border:1px solid #ccc;">
+     
+<p id='main'>
+   From this chart, we can see how SNAP benefits per person vary widely across the United States. 
+   Hawaii and Alaska are dramatic outliers, receiving nearly double the national average. 
+    This is largely attributable to their exceptionally high costs of living—groceries in Hawaii can cost 50-90% more than the continental U.S. 
+    due to shipping costs and geographic isolation. New York's high ranking likely reflects the elevated food costs in urban areas like New York City. 
+    The lowest-receiving states are predominantly in the Midwest, where the cost of living—particularly food costs—tends to be lower. 
+    Minnesota receives nearly $195 less per person than Hawaii, a 55% difference. 
+    Interestingly, West Virginia appears here despite having high poverty rates, suggesting that SNAP calculations weight cost of living heavily over poverty levels alone.
+
+</p>
+
+
+
+
 </body>
 </html>
