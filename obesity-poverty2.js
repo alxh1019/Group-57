@@ -20,7 +20,7 @@ data.then((_obData) => {
     .sort((a, b) => b.AverageObesityRate - a.AverageObesityRate)
     .map((d) => d.Code);
 
-  const width = 1100,
+  const width = 1000,
     height = 700;
   const margin = {
     top: 60,
