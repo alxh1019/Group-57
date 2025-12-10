@@ -9,12 +9,15 @@ Additionally, the northeast region generally occupy the points towards the botto
 The other regions display mixed results. 
 Overall, this graph can give you an idea of the correlation of obesity rate and income / poverty rate of the United States as well as where each region resides in on the graph.
 
+2.
 
-5. The "Health Expenditures by Country 1957 to x" interactive map gives a breakdown of what a given county spent its budget on in a given year. This map specifically looks at health expenditures which includes county level health programs like County Health Departments, Public Health Clinics and Community health outreach.
+3.
+
+4. The "Health Expenditures by Country 1957 to x" interactive map gives a breakdown of what a given county spent its budget on in a given year. This map specifically looks at health expenditures which includes county level health programs like County Health Departments, Public Health Clinics and Community health outreach.
 The counties that failed to report for a given year are given a dashed border similar to a hatching pattern. The coloring gradient is relative to the all-time high/low of county level per capita health expenditures.
 This allows the user when sliding through the years to view the evolution of county level health expenditures from 1957 to 2006 for insights into local trends. 
 
-6. The goal with the "Obesity Rate & State Spending by Category (2021-2023)" visualization is to see if there is any relation between a states expenditures 
+5. The goal with the "Obesity Rate & State Spending by Category (2021-2023)" visualization is to see if there is any relation between a states expenditures 
 on Education, Public Welfare, and Health and that states Obesity rate. Both the top and bottom bar charts share the same X-axis. This x axis 
 is the the states who reported obesity rates from 2021-2023 sorted by obesity rate. The top bar chart shows the actual obestiy rate of that state 
 with its y axis. The color of that bar chart encodes the year. 
