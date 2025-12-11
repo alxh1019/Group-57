@@ -10,6 +10,8 @@
     
     <h1 style="color: blue;">Mapping Obesity, Income, and Food Assistance in the U.S.</h1>
 
+    <hr style="border: 2px solid #333; margin: 30px 0;">
+
     <h2>Overall Introduction</h2>
 
     <p id='main'>
@@ -21,6 +23,8 @@
         We find this topic interesting as it could uncover the reason as to why some states have higher obesity rates compared to others. 
         Additionally, our results could suggest whether food assistance addresses nutrient deficits or inadvertently contributes to the obesity rate of that specific state.
     </p>
+
+    <hr style="border: 2px solid #333; margin: 30px 0;">
 
     <h2>Data Introduction</h2>
     
@@ -84,6 +88,8 @@
         National historical summary showing participation, benefits per person, total costs, and admin costs. (~56 rows, 7 columns)
     </p>
 
+    <hr style="border: 2px solid #333; margin: 30px 0;">
+
     <h2>References</h2>  
     <p>
         <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5781054/">
@@ -96,19 +102,20 @@
         </a>
     </p>
 
-    <h2>Visualizations</h2>
+    <hr style="border: 2px solid #333; margin: 30px 0;">
 
-    <p id='main'>
-       
-        
-    </p>
+    <h2>Visualizations</h2>
   
     <h3 style="font-size: 18px; margin-top: 20px;">United States Statistics (2020-2023)</h3>
 
+    <h4 style="font-size: 16px; margin-top: 15px;">Data Explanation</h4>
     <p id='main'>
-       The following visualizations are about the statistics of obesity rate, poverty rate, and income among all states of America from the years 2020–2023. 
-        This data was compiled by CDC and Census SAIPE and obtained via Kaggle. This plot is a similar graph to the Tooltip Scatterplot but has an additional interaction where the user can highlight each region of the United States.
-        From here, we are able to differentiate each region on the map by color and opacity to help the user better understand the difference between the regions.
+       This visualization uses state-level data on obesity rates, poverty rates, and median household income from 2020–2023, compiled by the CDC and Census SAIPE and obtained via Kaggle. The dataset includes all 50 U.S. states categorized by region (Northeast, Midwest, South, West), allowing for regional comparison of health and economic indicators.
+    </p>
+
+    <h4 style="font-size: 16px; margin-top: 15px;">How to Use This Graph</h4>
+    <p id='main'>
+        This interactive scatterplot displays obesity rate on the y-axis and median household income on the x-axis. Each point represents a state-year observation. Use the buttons below the graph to highlight specific regions by color—this will make the selected region's points opaque while fading other regions. Hover over any point to see detailed information about that specific state and year, including its exact obesity rate, income, poverty rate, and regional classification.
     </p>
     
     <iframe 
@@ -118,94 +125,103 @@
         style="border:none;">
     </iframe>
 
+    <h4 style="font-size: 16px; margin-top: 15px;">Interpretation</h4>
     <p id='main'>
-       From this plot, we can see how the south generally occupy the points towards the top left of the graph, or the high obesity and low income region. 
-        Additionally, the northeast region generally occupy the points towards the bottom right of the graph, or the low obesity and high income region.
-        The other regions display mixed results.
+       The visualization reveals clear regional patterns in the relationship between income and obesity. Southern states predominantly occupy the upper-left quadrant, indicating high obesity rates paired with lower median incomes. In contrast, Northeastern states cluster in the lower-right quadrant, showing lower obesity rates alongside higher incomes. This geographic divide suggests that economic factors play a significant role in obesity prevalence. The Midwest and West regions display more varied patterns, with states scattered across the graph, indicating that regional factors beyond simple income levels may influence obesity outcomes in these areas.
     </p>
 
     <h3 style="font-size: 18px; margin-top: 20px;">SNAP Benefits Map (June 2025)</h3>
 
-<p id='main'>
-   This interactive choropleth map of the United States visualizes SNAP (Supplemental Nutrition Assistance Program) benefits as of June 2025. 
-    The map allows users to explore both average benefits per participating household and average benefits per participating person, 
-    using data sourced from SNAP program records for each state, excluding U.S. territories. 
-    Users can toggle between the two metrics using buttons located below the map, 
-    while hovering over each state displays detailed information including total SNAP benefits, the number of participating households and persons, 
-    and the corresponding SNAP benefits per household or per person. 
-    The map uses a color gradient—blue for per participating household and green for per participating person—with darker shades representing higher benefits.
-</p>
-
-<iframe 
-    src="snap_map.html" 
-    width="95%" 
-    height="750" 
-    style="border:none;">
-</iframe>
-
- <p id='main'>
-       From this plot, we can see people from Hawaii an Alaska get the most support. This could be due to higher cost of living.
+    <h4 style="font-size: 16px; margin-top: 15px;">Data Explanation</h4>
+    <p id='main'>
+       This visualization uses June 2025 SNAP (Supplemental Nutrition Assistance Program) data from the USDA, including total benefits distributed, number of participating households, and number of participating persons for each state (U.S. territories excluded). From this data, we calculated two metrics: average benefits per participating household and average benefits per participating person, which reveal how SNAP support varies geographically.
     </p>
 
-<h3 style="font-size: 18px; margin-top: 20px;">SNAP Benefits per Participating Person by State – June 2025</h3>
+    <h4 style="font-size: 16px; margin-top: 15px;">How to Use This Graph</h4>
+    <p id='main'>
+       This interactive choropleth map allows you to explore SNAP benefits across the United States using a color-coded system. Click the buttons below the map to toggle between two views: "Per Household" (shown in blue gradient) and "Per Person" (shown in green gradient). Darker colors indicate higher benefit amounts. Hover your cursor over any state to see a tooltip displaying that state's total SNAP benefits, number of participating households and persons, and the selected metric's value. The color scales are independent for each metric to highlight variation within that specific measure.
+    </p>
 
-<p id='main'>
-   This static horizontal bar chart displays the SNAP benefits per participating person for each state. 
-   States are sorted from lowest to highest, with the length of each bar representing the amount of SNAP benefits per person. 
-</p>
+    <iframe 
+        src="snap_map.html" 
+        width="95%" 
+        height="750" 
+        style="border:none;">
+    </iframe>
 
-<img src="snap_per_person_horizontal_static.png" 
-     alt="SNAP per Participating Person by State" 
-     width="95%" 
-     style="display:block; margin:auto; border:1px solid #ccc;">
-     
-<p id='main'>
-   From this chart, we can see how SNAP benefits per person vary widely across the United States. 
-   Hawaii and Alaska are dramatic outliers, receiving nearly double the national average. 
-    This is largely attributable to their exceptionally high costs of living—groceries in Hawaii can cost 50-90% more than the continental U.S. 
-    due to shipping costs and geographic isolation. New York's high ranking likely reflects the elevated food costs in urban areas like New York City. 
-    The lowest-receiving states are predominantly in the Midwest, where the cost of living—particularly food costs—tends to be lower. 
-    Minnesota receives nearly $195 less per person than Hawaii, a 55% difference. 
-    Interestingly, West Virginia appears here despite having high poverty rates, suggesting that SNAP calculations weight cost of living heavily over poverty levels alone.
+    <h4 style="font-size: 16px; margin-top: 15px;">Interpretation</h4>
+    <p id='main'>
+       The map reveals substantial geographic variation in SNAP benefits, with Alaska and Hawaii receiving dramatically higher benefits per person and per household compared to other states. This pattern is primarily attributable to the significantly higher cost of living in these states—particularly food costs, which can be 50-90% higher than the continental U.S. due to shipping expenses and geographic isolation. States in the Midwest and South generally receive lower per-person benefits, reflecting their lower costs of living. This demonstrates that SNAP benefit calculations are adjusted for regional economic disparities, though questions remain about whether these adjustments adequately address nutritional needs in each location.
+    </p>
 
-</p>
+    <h3 style="font-size: 18px; margin-top: 20px;">SNAP Benefits per Participating Person by State – June 2025</h3>
 
-<h3 style="font-size: 18px; margin-top: 20px;">County Health Expenditures (1957-2006)</h3>
+    <h4 style="font-size: 16px; margin-top: 15px;">Data Explanation</h4>
+    <p id='main'>
+       This chart uses the same June 2025 USDA SNAP data as the map above but presents it in a different format to facilitate state-by-state comparison. The metric shown is SNAP benefits per participating person, calculated by dividing total state benefits by the number of participating persons in each state.
+    </p>
 
-<p>
-   This uses <a href="https://www.census.gov/programs-surveys/gov-finances/data/historical-data.html">Historical County Government finance data set</a> for the Census Bureau.
-   This gives a breakdown of what a given county spent its budget on in a given year. This map specifically looks at health expenditures which includes county level health programs like
-   County Health Departments, Public Health Clinics and Community health outreach.
-</p>
-<p>
-   SNAP is a federally funded program however there are many health initiatives to be started at a local level. This map shows the county health expenditures per capita in the USA from 1957 to 2006.
-   The coloring is relative to the entire dataset. This map shows us that not only have expenditures at a county level increased greatly in the past 50 years but also 
-   reporting of heath expenditures has increased.
-</p>
+    <h4 style="font-size: 16px; margin-top: 15px;">How to Use This Graph</h4>
+    <p id='main'>
+       This static horizontal bar chart displays all 50 states sorted from lowest to highest SNAP benefits per person. The length of each bar corresponds to the dollar amount of benefits per participating person. Simply scan from top to bottom to see which states provide the least and most SNAP support per individual. The sorted arrangement makes it easy to identify outliers and compare your state of interest to others.
+    </p>
 
-<iframe 
-    src="county_map.html" 
-    width="1000" 
-    height="600" 
-    style="border:none;">
-</iframe>
+    <img src="snap_per_person_horizontal_static.png" 
+         alt="SNAP per Participating Person by State" 
+         width="95%" 
+         style="display:block; margin:auto; border:1px solid #ccc;">
 
-<h3 style="font-size: 18px; margin-top: 20px;">State Expenditures and Obesity Rates (2021-2023)</h3>
+    <h4 style="font-size: 16px; margin-top: 15px;">Interpretation</h4>
+    <p id='main'>
+       The chart reveals dramatic variation in SNAP benefits across states. Hawaii and Alaska are clear outliers, receiving nearly double the national average—Hawaii's per-person benefits are approximately $195 higher (55% more) than Minnesota's, the lowest-receiving state. This disparity reflects differences in cost of living rather than poverty levels, as evidenced by West Virginia's placement despite its high poverty rate. New York's high ranking likely reflects elevated food costs in New York City and other urban areas. The lowest-receiving states are predominantly in the Midwest, where living costs, particularly for food, tend to be lower. This distribution suggests that SNAP calculations heavily weight geographic cost of living, appropriately adjusting benefits to maintain similar purchasing power across different economic contexts.
+    </p>
 
-<p>
-This graph uses the ASFIN dataset from 2021-2023. 
-The top graph uses the average obestiy rate at a state level from 2021 to 2023. 
-The bottom graph overlays each states expenditures in Health, Public Welfare and Education as a percentage of the total of those three categories.
-They share an x axis which is sorted by average obesity rate of the 3 years for that given state.
-</p>
+    <h3 style="font-size: 18px; margin-top: 20px;">County Health Expenditures (1957-2006)</h3>
 
-<p>
-This graph reveals that overall investments in health intialtives and general public wellbeing improve obesity rates at a state level. However there is no clear category which is most effective 
-from the data presented. 
-</p>
+    <h4 style="font-size: 16px; margin-top: 15px;">Data Explanation</h4>
+    <p id='main'>
+       This visualization uses the <a href="https://www.census.gov/programs-surveys/gov-finances/data/historical-data.html">Historical County Government Finance dataset</a> from the Census Bureau, spanning 1957 to 2006. The data includes county-level expenditures broken down by category, with this map specifically focusing on health expenditures. These health expenditures encompass county-funded programs such as county health departments, public health clinics, and community health outreach initiatives. The metric shown is per capita health spending, calculated by dividing total county health expenditures by county population.
+    </p>
+
+    <h4 style="font-size: 16px; margin-top: 15px;">How to Use This Graph</h4>
+    <p id='main'>
+       This animated choropleth map shows county health expenditures per capita across the United States from 1957 to 2006. The color scale is relative to the entire 50-year dataset, with darker colors indicating higher per capita spending. Use the play button or slider at the bottom to animate through the years and observe how health spending evolved over time. You can also hover over individual counties to see specific expenditure values. Note that blank areas indicate either missing data or counties that did not report health expenditures for that year.
+    </p>
+
+    <iframe 
+        src="county_map.html" 
+        width="1000" 
+        height="600" 
+        style="border:none;">
+    </iframe>
+
+    <h4 style="font-size: 16px; margin-top: 15px;">Interpretation</h4>
+    <p id='main'>
+       The animation reveals two significant trends over the 50-year period. First, per capita county health expenditures increased substantially across most of the United States, indicating growing investment in local public health infrastructure. Second, reporting of health expenditures became more comprehensive and widespread, as evidenced by fewer blank areas on the map in later years. While SNAP is a federally funded program, this visualization demonstrates that many health initiatives operate at the local level. The increasing investment in county health departments and community health programs suggests a growing recognition of the importance of localized public health interventions, which may complement federal programs like SNAP in addressing broader health outcomes including obesity.
+    </p>
+
+    <h3 style="font-size: 18px; margin-top: 20px;">State Expenditures and Obesity Rates (2021-2023)</h3>
+
+    <h4 style="font-size: 16px; margin-top: 15px;">Data Explanation</h4>
+    <p id='main'>
+       This visualization combines two data sources: obesity rates from the CDC (averaged across 2021-2023 for each state) and state government expenditure data from the Annual Survey of State Government Finances (ASFIN) for 2021-2023. The expenditure data focuses on three categories—Health, Public Welfare, and Education—and shows each state's spending in these categories as a percentage of the total across all three. This allows for comparison of spending priorities relative to health outcomes.
+    </p>
+
+    <h4 style="font-size: 16px; margin-top: 15px;">How to Use This Graph</h4>
+    <p id='main'>
+       This dual-chart visualization consists of two graphs sharing a common x-axis. The top chart displays the average obesity rate for each state across 2021-2023 as bars. The bottom chart shows stacked areas representing the proportion of each state's spending dedicated to Health (bottom layer), Public Welfare (middle layer), and Education (top layer). States are sorted along the x-axis from lowest to highest obesity rate, allowing you to visually track how spending patterns relate to obesity outcomes as you move from left to right.
+    </p>
+
     <div class="test" id="barplot"></div>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="obesity-poverty2.js"></script>
+
+    <h4 style="font-size: 16px; margin-top: 15px;">Interpretation</h4>
+    <p id='main'>
+       The visualization suggests a relationship between state spending priorities and obesity outcomes, though the pattern is complex. States with lower obesity rates (on the left side of the chart) tend to show higher overall investment in the combined categories of Health, Public Welfare, and Education. However, no single spending category emerges as the clear driver of better outcomes. Some low-obesity states prioritize health spending, while others emphasize education or public welfare. This indicates that comprehensive investment across multiple sectors—rather than focusing on a single category—may be most effective in addressing obesity. The variation in spending patterns among states with similar obesity rates also suggests that factors beyond state expenditures, such as regional culture, food environment, and local policies, play important roles in determining obesity prevalence.
+    </p>
+
+    <hr style="border: 2px solid #333; margin: 30px 0;">
 
     <h2>Conclusion</h2>
 
