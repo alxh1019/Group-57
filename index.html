@@ -8,7 +8,7 @@
 </head>
 <body>
     
-    <h1 style="color: blue;font-size: 24px;">Mapping Obesity, Income, and Food Assistance in the U.S.</h1>
+    <h1 style="color: blue;">Mapping Obesity, Income, and Food Assistance in the U.S.</h1>
 
     <h2>Overall Introduction</h2>
 
@@ -20,6 +20,68 @@
         This project investigates the possible connection of obesity rates to income and food assistance across the United States. 
         We find this topic interesting as it could uncover the reason as to why some states have higher obesity rates compared to others. 
         Additionally, our results could suggest whether food assistance addresses nutrient deficits or inadvertently contributes to the obesity rate of that specific state.
+    </p>
+
+    <h2>Data Introduction</h2>
+    
+    <p id='main'>
+        This project integrates multiple datasets to provide a comprehensive view of obesity, economic factors, and food assistance across U.S. states. Below is an overview of the data sources used in our analysis.
+    </p>
+
+    <h3 style="font-size: 18px; margin-top: 20px;">1. Obesity, Income, and Poverty Rates Across U.S. States (2019–2023)</h3>
+    <p id='main'>
+        <strong>Source:</strong> 
+        <a href="https://www.cdc.gov/obesity/data/state-trends.html" target="_blank">CDC</a> and 
+        <a href="https://www.census.gov/programs-surveys/saipe.html" target="_blank">Census SAIPE</a><br>
+        <strong>Description:</strong> Annual state-level measures of obesity rate, poverty rate, and median household income for 2019–2023. Includes regional averages (Northeast, Midwest, South, West).
+    </p>
+    <ul>
+        <li><strong>Approx. size:</strong> 278 rows</li>
+        <li><strong>Columns:</strong> State, Year, Obesity Rate, Poverty Rate, Income, Region</li>
+    </ul>
+
+    <h3 style="font-size: 18px; margin-top: 20px;">2. State Government Finances (2020–2023)</h3>
+    <p id='main'>
+        <strong>Source:</strong> 
+        <a href="https://www.census.gov/programs-surveys/gov-finances.html" target="_blank">U.S. Census Bureau — Annual Survey of State Government Finances</a><br>
+        <strong>Description:</strong> Fiscal indicators for state governments (revenues, expenditures, debt, public welfare spending, etc.). Project focuses on 2020–2023 to align with other datasets.
+    </p>
+    <ul>
+        <li><strong>Approx. size (per year):</strong> ~71 rows, ~52 columns</li>
+        <li><strong>Representative columns:</strong> Total Revenue, Expenditures, Debt Outstanding, Public Welfare, Education, Cash & Securities</li>
+    </ul>
+
+    <h3 style="font-size: 18px; margin-top: 20px;">3. SNAP (Food Stamp) Participation & Benefits</h3>
+    <p id='main'>
+        Multiple USDA tables covering persons, households, benefits, and an annual national summary.
+    </p>
+
+    <h4 style="font-size: 16px; margin-top: 15px; margin-left: 20px;">3.1 SNAP Persons (May 2024, Apr 2025, May 2025)</h4>
+    <p id='main'>
+        <strong>Source:</strong> 
+        <a href="https://www.fns.usda.gov/sites/default/files/resource-files/snap-persons-9.xlsx" target="_blank">USDA SNAP Persons Dataset</a><br>
+        Tracks the number of individuals receiving SNAP by state and percent-change metrics. (~66 rows, ~6 columns)
+    </p>
+
+    <h4 style="font-size: 16px; margin-top: 15px; margin-left: 20px;">3.2 SNAP Households</h4>
+    <p id='main'>
+        <strong>Source:</strong> 
+        <a href="https://www.fns.usda.gov/sites/default/files/resource-files/snap-households-9.xlsx" target="_blank">USDA SNAP Households Dataset</a><br>
+        Counts of households participating in SNAP (monthly snapshots plus percent changes). (~50–60 rows, 6–7 columns)
+    </p>
+
+    <h4 style="font-size: 16px; margin-top: 15px; margin-left: 20px;">3.3 SNAP Benefits (Dollar amounts)</h4>
+    <p id='main'>
+        <strong>Source:</strong> 
+        <a href="https://www.fns.usda.gov/sites/default/files/resource-files/snap-benefits-9.xlsx" target="_blank">USDA SNAP Benefits Dataset</a><br>
+        Total dollar amount of benefits issued by state for multiple months with percent-change columns. (~50–60 rows, 6–7 columns)
+    </p>
+
+    <h4 style="font-size: 16px; margin-top: 15px; margin-left: 20px;">3.4 SNAP Annual Summary (1969–2024)</h4>
+    <p id='main'>
+        <strong>Source:</strong> 
+        <a href="https://www.fns.usda.gov/sites/default/files/resource-files/snap-annualsummary-9.xlsx" target="_blank">USDA SNAP Annual Summary Dataset</a><br>
+        National historical summary showing participation, benefits per person, total costs, and admin costs. (~56 rows, 7 columns)
     </p>
 
     <h2>References</h2>  
@@ -34,7 +96,7 @@
         </a>
     </p>
 
-    <h1 style="font-size: 24px;">United States Statistics (2020-2023)</h1>
+    <h2>United States Statistics (2020-2023)</h2>
 
     <p id='main'>
        The following visualizations are about the statistics of obesity rate, poverty rate, and income among all states of America from the years 2020–2023. 
@@ -42,7 +104,7 @@
         
     </p>
   
-    <h2>Interactive Regional Scatterplot Visualization</h2>
+    <h3 style="font-size: 18px; margin-top: 20px;">Interactive Regional Scatterplot Visualization</h3>
 
     <p id='main'>
        This plot is a similar graph to the Tooltip Scatterplot but has an additional interaction where the user can highlight each region of the United States.
@@ -62,7 +124,7 @@
         The other regions display mixed results.
     </p>
 
-    <h2>SNAP Benefits Map (June 2025)</h2>
+    <h3 style="font-size: 18px; margin-top: 20px;">SNAP Benefits Map (June 2025)</h3>
 
 <p id='main'>
    This interactive choropleth map of the United States visualizes SNAP (Supplemental Nutrition Assistance Program) benefits as of June 2025. 
@@ -85,7 +147,7 @@
        From this plot, we can see people from Hawaii an Alaska get the most support. This could be due to higher cost of living.
     </p>
 
-<h2>SNAP Benefits per Participating Person by State – June 2025</h2>
+<h3 style="font-size: 18px; margin-top: 20px;">SNAP Benefits per Participating Person by State – June 2025</h3>
 
 <p id='main'>
    This static horizontal bar chart displays the SNAP benefits per participating person for each state. 
@@ -108,7 +170,7 @@
 
 </p>
 
-
+<h3 style="font-size: 18px; margin-top: 20px;">County Health Expenditures (1957-2006)</h3>
 
 <p>
    This uses <a href="https://www.census.gov/programs-surveys/gov-finances/data/historical-data.html">Historical County Government finance data set</a> for the Census Bureau.
@@ -128,6 +190,8 @@
     style="border:none;">
 </iframe>
 
+<h3 style="font-size: 18px; margin-top: 20px;">State Expenditures and Obesity Rates (2021-2023)</h3>
+
 <p>
 This graph uses the ASFIN dataset from 2021-2023. 
 The top graph uses the average obestiy rate at a state level from 2021 to 2023. 
@@ -142,6 +206,38 @@ from the data presented.
     <div class="test" id="barplot"></div>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="obesity-poverty2.js"></script>
+
+    <h2>Conclusion</h2>
+
+    <p id='main'>
+        This project examined the complex relationships between obesity rates, income levels, and food assistance programs across the United States. 
+        Our analysis revealed several key findings that illuminate the multifaceted nature of this public health challenge.
+    </p>
+
+    <p id='main'>
+        First, we observed clear regional patterns in the relationship between obesity and income. The Southern states consistently occupy the high obesity, low income quadrant of our visualizations, 
+        while Northeastern states tend toward lower obesity rates and higher incomes. This geographic divide suggests that economic factors play a significant role in obesity prevalence, 
+        though the relationship is not uniformly consistent across all regions.
+    </p>
+
+    <p id='main'>
+        Second, our examination of SNAP benefits revealed substantial variation across states, with Hawaii and Alaska receiving dramatically higher per-person benefits—nearly double the national average. 
+        This variation appears to be primarily driven by cost of living differences rather than poverty rates alone, as evidenced by states like West Virginia having high poverty yet lower SNAP benefits per person. 
+        This finding suggests that food assistance programs do account for geographic economic disparities, though the effectiveness of these adjustments in addressing nutritional needs remains an open question.
+    </p>
+
+    <p id='main'>
+        Third, the historical analysis of county health expenditures from 1957 to 2006 demonstrates a significant increase in both spending and reporting on public health initiatives at the local level. 
+        When combined with our state-level expenditure analysis, the data indicates that investments in health, public welfare, and education are associated with improved obesity outcomes. 
+        However, no single category of spending emerges as definitively most effective, suggesting that comprehensive approaches addressing multiple factors may be necessary.
+    </p>
+
+    <p id='main'>
+        Ultimately, this research demonstrates that obesity rates cannot be attributed to a single factor. Instead, they result from the interplay of economic conditions, regional characteristics, 
+        food assistance accessibility, and public health investments. While SNAP and other assistance programs help address food insecurity, particularly in high-cost-of-living areas, 
+        the persistent high obesity rates in low-income regions indicate that access to affordable food alone may not be sufficient. Future interventions may need to address not just food availability 
+        but also food quality, nutritional education, healthcare access, and broader economic opportunities to meaningfully reduce obesity disparities across American states.
+    </p>
 
 </body>
 </html>
